@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TSIW hub</title>
+    <link rel="stylesheet" href="./user/userCSS/presentation.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <!-- NAVIGATION -->
+    <div id="navbar"></div>
+    <!-- BODY -->
+
+    <main class="max-w-7xl mx-auto my-24 mx-5 flex flex-col m-8 mb-32 lg:mb-24">
+      <!-- BANNER -->
+      <div
+        id="bannerSlider"
+        class="relative w-full h-96 rounded-md overflow-hidden bg-cover bg-center"
+      >
+        <!-- Overlay -->
+        <div class="absolute inset-0 bg-black opacity-50"></div>
+        <h1
+          class="absolute inset-0 flex items-center justify-center text-white text-4xl font-bold select-none"
+        >
+          Bem-vindo a TSIW
+        </h1>
+      </div>
+      <!-- CIRCLE CONTAINER -->
+      <div class="flex justify-center mt-4" id="circleContainer"></div>
+
+      <!--EVENTS-->
+      <h1 class="text-xl font-bold mt-16 ml-5">Eventos</h1>
+      <div
+        id="allEvents"
+        class="w-full grid gap-4 mt-6 lg:grid-cols-4 sm:grid-cols-2 grid-cols-1"
+      ></div>
+
+      <!--GALLERY-->
+      <h1 class="text-xl font-bold mt-16 ml-5">Galeria</h1>
+      <div
+        id="allGallery"
+        class="w-full flex overflow-x-scroll space-x-4 p-4"
+      ></div>
+    </main>
+
+    <!-- FAB -->
+    <div id="FABDiv"></div>
+
+    <!-- FOOTER -->
+    <div id="FooterDiv"></div>
+
+    <script src="/components/FAB.js"></script>
+    <script src="/components/Footer.js"></script>
+    <script src="/components/Navbar.js"></script>
+    <!-- SELECTED INDEX -->
+    <script>
+      const selectedItem = "Apresentação";
+      const navbarHTML = createNavbar(selectedItem);
+      document.getElementById("navbar").innerHTML = navbarHTML;
+    </script>
+    <!--  -->
+    <script src="/Controller/user/navbar.js"></script>
+    <script type="module" src="/Utils/logout.js"></script>
+    <!-- presentation.js -->
+    <script
+      type="module"
+      src="/Controller/user/presentation/banner.js"
+    ></script>
+    <script
+      type="module"
+      src="../Controller/user/presentation/gallery.js"
+    ></script>
+    <script
+      type="module"
+      src="../Controller/user/presentation/events.js"
+    ></script>
+  </body>
+</html>

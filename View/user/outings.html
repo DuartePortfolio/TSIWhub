@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TSIW hub</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <!-- NAVIGATION -->
+    <div id="navbar"></div>
+    <!-- BODY -->
+
+    <div class="flex justify-center items-center min-h-[calc(100vh-62px)]">
+      <div
+        id="outingsDiv"
+        class="grid grid-cols-1 md:grid-cols-3 max-w-5xl"
+      ></div>
+    </div>
+
+    <!-- FAB -->
+    <div id="FABDiv"></div>
+    <!-- FOOTER -->
+    <div id="FooterDiv"></div>
+
+    <script src="/components/FAB.js"></script>
+    <script src="/components/Footer.js"></script>
+    <script src="/components/Navbar.js"></script>
+    <!-- SELECTED INDEX -->
+    <script>
+      const selectedItem = "Saídas";
+      const navbarHTML = createNavbar(selectedItem);
+      document.getElementById("navbar").innerHTML = navbarHTML;
+    </script>
+    <!--  -->
+    <script src="/Controller/user/navbar.js"></script>
+    <script type="module" src="/Controller/user/outings.js"></script>
+    <script type="module" src="/Utils/logout.js"></script>
+  </body>
+</html>

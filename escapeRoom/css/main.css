@@ -1,0 +1,315 @@
+/* POP UP */
+
+#popup {
+  position: fixed;
+  z-index: 50;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: none;
+}
+
+#popup > div {
+  position: relative;
+  width: 60%;
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 1);
+  margin: auto;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+#popup #close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: blue;
+  color: white;
+  padding: 8px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+#popup h1 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+#popup #options {
+  margin-bottom: 20px;
+}
+
+#popup input[type="text"],
+#popup textarea {
+  width: calc(100% - 20px); /* Adjust width and padding as needed */
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+#popup button {
+  width: 100%;
+  padding: 10px;
+  background-color: blue;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#answer {
+  display: none;
+}
+
+body {
+  margin: 0;
+  box-sizing: border-box;
+  background: #a29bba;
+}
+
+/* TIMER */
+
+.timer_stuff {
+  position: fixed;
+}
+
+#timer {
+  padding: 12px;
+  border: 2px solid #000000;
+  font-weight: bolder;
+  background: #ff0000;
+  border-radius: 4px;
+  color: #ffffff;
+  top: 10px;
+  right: 10px;
+  z-index: 100;
+  font-size: x-large;
+}
+
+/*  */
+
+#container {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+}
+#wrapper {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+.correct-pop-up {
+  position: fixed;
+  color: #ffffff;
+  z-index: 100;
+  top: 80px;
+  right: 24px;
+  display: none;
+  justify-items: center;
+  align-items: center;
+  padding: 4px 16px;
+  border-radius: 8px;
+  background: #0e860a;
+}
+
+#toplevel {
+  position: fixed;
+  width: 40vw;
+  height: 50vh;
+  left: 30vw;
+  top: 25vh;
+  background: #f0f0f0;
+  z-index: -2;
+  border-radius: 10px;
+}
+
+area {
+  position: absolute;
+  cursor: pointer;
+}
+
+/* ABSOLUTES */
+
+#escape_room,
+map,
+#fundo,
+#layer_areas,
+.variants {
+  position: absolute;
+  height: 100vh;
+}
+
+/*  */
+
+#layer_areas {
+  z-index: 1;
+}
+
+#bubble {
+  position: absolute;
+  visibility: hidden;
+  width: 32px;
+  height: 32px;
+  z-index: 2;
+}
+
+/* SLOTS */
+
+.allSlots {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: 24px;
+  right: 24px;
+  gap: 10px;
+  z-index: 2;
+}
+
+.allSlots > div {
+  border-radius: 8px;
+  background: #fff;
+  background-repeat: no-repeat;
+  border: solid 3px black;
+  height: 90px;
+  width: 90px;
+  justify-content: center;
+  align-items: center;
+}
+
+#manualIcon {
+  position: absolute;
+  bottom: 24px;
+  z-index: 200;
+  left: 24px;
+  border-radius: 8px;
+  background: #fff;
+  background-repeat: no-repeat;
+  border: solid 3px black;
+  height: 90px;
+  width: 90px;
+  justify-content: center;
+  align-items: center;
+  background-image: url("../../images/assets/Manual.png");
+  cursor: pointer;
+}
+
+#manual {
+  padding: 10px;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  display: none;
+}
+
+#cifraBooks {
+  padding: 10px;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  display: none;
+}
+
+#pageOneCifra {
+  margin: 60px 10px 10px 20%;
+  background-color: #fff;
+  width: 30%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  cursor: pointer;
+}
+
+#pageTwoCifra {
+  margin: 60px 20% 10px 10px;
+  background-color: #fff;
+  width: 30%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  cursor: pointer;
+}
+
+#pageOne {
+  margin: 48px 10px 10px 10px;
+  width: 50%;
+  font-weight: bold;
+  background: linear-gradient(to left, white 80%, gray 100%);
+  display: flex;
+  justify-content: center;
+  padding-top: 30px;
+  cursor: pointer;
+}
+
+#pageTwo {
+  margin: 48px 10px 10px 10px;
+  width: 50%;
+  font-weight: bold;
+  background: linear-gradient(to right, white 80%, gray 100%);
+  display: flex;
+  justify-content: center;
+  padding-top: 30px;
+  cursor: pointer;
+}
+
+#cifraBooksClose {
+  position: absolute;
+  top: 10px;
+  right: 20%;
+  background: blue;
+  color: white;
+  padding: 8px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+#pageOneNum {
+  position: absolute;
+  top: 10px;
+  left: 45%;
+  background: #fff;
+  padding: 8px;
+  border-radius: 8px;
+}
+
+#pageTwoNum {
+  position: absolute;
+  top: 10px;
+  right: 45%;
+  background: #fff;
+  padding: 8px;
+  border-radius: 8px;
+}
+
+#manualClose {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: blue;
+  color: white;
+  padding: 8px;
+  border-radius: 8px;
+  cursor: pointer;
+}

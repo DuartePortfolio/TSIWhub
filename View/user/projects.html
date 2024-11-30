@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TSIW hub</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="flex flex-col min-h-screen">
+    <!-- NAVIGATION -->
+    <div id="navbar"></div>
+
+    <!-- CONTENT -->
+    <main class="flex-1 flex items-center justify-center flex-col">
+      <!-- PROJECTS -->
+      <div id="allProjects" class="flex gap-5 mb-4"></div>
+
+      <!-- Navigation Buttons -->
+      <div class="flex flex-row justify-center items-center">
+        <button
+          id="prevButton"
+          class="bg-purple-400 hover:bg-purple-500 text-white font-bold py-2 px-4 rounded mr-4"
+        >
+          Anterior
+        </button>
+        <button
+          id="nextButton"
+          class="bg-purple-400 hover:bg-purple-500 text-white font-bold py-2 px-4 rounded"
+        >
+          Próximo
+        </button>
+      </div>
+    </main>
+
+    <!-- FAB -->
+    <div id="FABDiv"></div>
+
+    <!-- FOOTER -->
+    <footer id="FooterDiv"></footer>
+
+    <script src="/components/FAB.js"></script>
+    <script src="/components/Footer.js"></script>
+    <script src="/components/Navbar.js"></script>
+    <!-- SELECTED INDEX -->
+    <script>
+      const selectedItem = "Projetos";
+      const navbarHTML = createNavbar(selectedItem);
+      document.getElementById("navbar").innerHTML = navbarHTML;
+    </script>
+    <!--  -->
+    <script src="/Controller/user/navbar.js"></script>
+    <script type="module" src="/Controller/user/projects.js"></script>
+    <script type="module" src="/Utils/logout.js"></script>
+  </body>
+</html>

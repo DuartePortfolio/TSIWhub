@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Register</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <main class="flex justify-center items-center h-screen p-5 bg-violet-200">
+      <div
+        class="w-full max-w-sm p-4 bg-white border border-gray-200 rounded-lg shadow sm:p-6 md:p-8"
+      >
+        <form class="space-y-4" id="registerForm">
+          <h5 class="text-xl font-medium text-gray-900">Regista um conta</h5>
+          <div>
+            <label
+              for="name"
+              class="block mb-2 text-sm font-medium text-gray-900"
+              >Nome</label
+            >
+            <input
+              type="text"
+              name="name"
+              id="name"
+              class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-violet-600 focus:border-violet-600 block w-full p-2.5"
+              placeholder="O teu nome"
+              required
+            />
+          </div>
+          <div>
+            <label
+              for="surname"
+              class="block mb-2 text-sm font-medium text-gray-900"
+              >O teu apelido</label
+            >
+            <input
+              type="text"
+              name="surname"
+              id="surname"
+              class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-violet-600 focus:border-violet-600 block w-full p-2.5"
+              placeholder="Apelido"
+              required
+            />
+          </div>
+          <div>
+            <label
+              for="email"
+              class="block mb-2 text-sm font-medium text-gray-900"
+              >O teu email</label
+            >
+            <input
+              type="email"
+              name="email"
+              id="email"
+              class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-violet-600 focus:border-violet-600 block w-full p-2.5"
+              placeholder="nome@email.com"
+              required
+            />
+            <div id="emailError" class="text-red-500 text-xs hidden">
+              Utilizador já existe
+            </div>
+          </div>
+          <div>
+            <label
+              for="password"
+              class="block mb-2 text-sm font-medium text-gray-900"
+              >A tua palavra-passe</label
+            >
+            <input
+              type="password"
+              name="password"
+              id="password"
+              placeholder="••••••••"
+              class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-violet-600 focus:border-violet-600 block w-full p-2.5"
+              required
+            />
+            <div id="passwordLengthError" class="text-red-500 text-xs hidden">
+              Palavras-passe precisam de pelo menos 6 digitos
+            </div>
+          </div>
+
+          <div>
+            <label
+              for="confirmPassword"
+              class="block mb-2 text-sm font-medium text-gray-900"
+              >Confirma a tua palavra-passe</label
+            >
+            <input
+              type="password"
+              name="confirmPassword"
+              id="confirmPassword"
+              placeholder="••••••••"
+              class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-violet-600 focus:border-violet-600 block w-full p-2.5"
+              required
+            />
+            <div id="passwordMatchError" class="text-red-500 text-xs hidden">
+              As palavras-passes não coincidem
+            </div>
+          </div>
+          <button
+            type="submit"
+            class="w-full text-white bg-violet-600 hover:bg-violet-600 focus:ring-4 focus:outline-none focus:ring-violet-600 font-medium rounded-lg text-sm px-5 py-2.5 text-center"
+          >
+            Criar
+          </button>
+          <div class="text-sm font-medium text-gray-500">
+            Já tenho uma conta.
+            <a href="/View/login.html" class="text-violet-600 hover:underline"
+              >Entrar</a
+            >
+          </div>
+        </form>
+      </div>
+    </main>
+
+    <script src="/Controller/user/register.js"></script>
+  </body>
+</html>
